@@ -1,7 +1,36 @@
+import './speseMission.css'
 export default function SpaceMission() {
 
+    let shipName: string = 'Союз';
+    let crewCount: number = 3;
+    let missionStarted: boolean = true;
+    const crewNames: string[] = ['Гагарин Юрий', 'Титов Герман', 'Терешкова Валентина', 'Попович Павел'];
+    const captain: readonly [string, number] = ['Гагарин Юрий', 35];
+    // console.log(shipName);
+    // console.log(crewCount);
+    // console.log(missionStarted);
+    // console.log(crewNames);
+    // console.log(captain);
 
-    return(
-        <h2>Миссия Марс</h2>
+    function startMission(shipName: string): string {
+        return `Миссия ${shipName} началась!`;
+    }
+
+    const missionMessage = missionStarted ? startMission(shipName) : '';
+
+    return (
+        <>
+        <h4>homework06</h4>
+            <h2>Миссия Марс</h2>
+            <p> Экипаж: {crewCount} человека</p>
+            <p>Капитан: {captain.join(' ')}  лет</p>
+
+            <ul>
+                {crewNames.map((name, index) => (
+                    <li key={index}>{name}</li>
+                ))}
+            </ul>
+            <p>{missionMessage}</p>
+        </>
     )
 }
