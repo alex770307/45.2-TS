@@ -2,15 +2,15 @@ import './speseMission.css'
 export default function SpaceMission() {
 
     let shipName: string = 'Союз';
-    let crewCount: number = 3;
+    let crewCount: number = 4;
     let missionStarted: boolean = true;
     const crewNames: string[] = ['Гагарин Юрий', 'Титов Герман', 'Терешкова Валентина', 'Попович Павел'];
     const captain: readonly [string, number] = ['Гагарин Юрий', 35];
-    // console.log(shipName);
-    // console.log(crewCount);
-    // console.log(missionStarted);
-    // console.log(crewNames);
-    // console.log(captain);
+    console.log(shipName);
+    console.log(crewCount);
+    console.log(missionStarted);
+    console.log(crewNames);
+    console.log(captain);
 
     function startMission(shipName: string): string {
         return `Миссия ${shipName} началась!`;
@@ -20,7 +20,7 @@ export default function SpaceMission() {
 
     return (
         <>
-        <h4>homework06</h4>
+            <h4>homework06</h4>
             <h2>Миссия Марс</h2>
             <p> Экипаж: {crewCount} человека</p>
             <p>Капитан: {captain.join(' ')}  лет</p>
