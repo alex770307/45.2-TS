@@ -1,7 +1,8 @@
-// interface IMyButtonProps {
-//     type: "button"
-// }
-// export default function MyButton({type, children}) {
+interface IMyButtonProps {
+    type?: "button" | "submit" | "reset";
+    children: string;
+}
+export default function MyButton({type, children}: IMyButtonProps) {
    
-//     return <button type={type}>{children}</button>
-// }
+    return <button type={type}>{children}</button>
+}

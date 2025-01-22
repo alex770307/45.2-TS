@@ -1,5 +1,6 @@
 
 import './App.css'
+import Homework03 from './homeworks/homework03/Homework03'
 import Homework04 from './homeworks/homework04/Homework04'
 import Homework05 from './homeworks/homework05/Homework05'
 import Homework06 from './homeworks/homework06/Homework06'
@@ -16,6 +17,7 @@ function App() {
 
   return (
     <>
+      <Homework03 />
     <Homework04 />
     <Homework05 />
     <Homework06 />
