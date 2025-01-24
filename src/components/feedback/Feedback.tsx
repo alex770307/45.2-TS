@@ -21,6 +21,10 @@ function Feedback() {
         <>
             <h4>Homework04:</h4>
             <div className="feedback">
+                {/* <myButton className="myButton" onClick={handleLike}>Like {likeCount}</myButton>
+                <myButton className="myButton" onClick={handleDislike}>Dislike {dislikeCount}</myButton>
+                <myButton className="myButton" onClick={resetResults}>Reset Results</myButton> */}
+
                 <button className="myButton" onClick={handleLike}>Like {likeCount}</button>
                 <button className="myButton" onClick={handleDislike}>Dislike {dislikeCount}</button>
                 <button className="myButton" onClick={resetResults}>Reset Results</button>

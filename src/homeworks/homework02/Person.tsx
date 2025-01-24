@@ -1,6 +1,4 @@
-import ProfileCard from '../../components/profileCard/ProfileCard';
-// import './App.css';
-
+import ProfileCard from "../../components/profileCard/ProfileCard";
 
 function Person() {
     const profiles = [
@@ -52,6 +50,7 @@ function Person() {
                     profession={profile.profession}
                     hobby={profile.hobby}
                 />
+                
             ))}
         </div>
     );

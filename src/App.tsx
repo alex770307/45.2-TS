@@ -1,5 +1,7 @@
 
 import './App.css'
+import Homework01 from './homeworks/homework01/Homework01'
+import Homework02 from './homeworks/homework02/Homework02'
 import Homework03 from './homeworks/homework03/Homework03'
 import Homework04 from './homeworks/homework04/Homework04'
 import Homework05 from './homeworks/homework05/Homework05'
@@ -13,21 +15,23 @@ import Lesson06 from './lessons/lesson06/Lesson06'
 import Lesson07 from './lessons/lesson07/Lesson07'
 
 function App() {
-  
+
 
   return (
     <>
+      <Homework01 />
+      <Homework02 />
       <Homework03 />
-    <Homework04 />
-    <Homework05 />
-    <Homework06 />
-    <Lesson01 />
-    <Lesson02 />
-    <Lesson03 />
-    <Lesson04 />
-    <Lesson05 />
-    <Lesson06 /> 
-    <Lesson07 /> 
+      <Homework04 />
+      <Homework05 />
+      <Homework06 />
+      <Lesson01 />
+      <Lesson02 />
+      <Lesson03 />
+      <Lesson04 />
+      <Lesson05 />
+      <Lesson06 />
+      <Lesson07 />
     </>
   )
 }

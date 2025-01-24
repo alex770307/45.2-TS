@@ -69,6 +69,7 @@ console.log('render!')
         <button onClick={handlePlus}>+</button>
        </div>
       )}
+      
   </div>
  )
 }

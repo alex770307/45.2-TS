@@ -109,14 +109,14 @@ function Lesson07() {
 
   // с помощью дженерика можно создать универсальную функцию
   // мы задаем параметр за место которого при вызове функции можно подставить любой тип
-  function makeArray<T>(first: T, second: T): T[] {
+  function makeArray<T, N>(first: T, second: N): [T, N] {
     return [first, second];
   }
 
 
-  makeArray<number>(12, 42);
-  makeArray<string>('apple', 'apple');
-  makeArray<boolean>(true, false);
+  makeArray<number, string>(12, '42');
+  makeArray<string, string>('apple', 'apple');
+  makeArray<boolean, boolean>(true, false);
 
 
   // ! типизация массива объектов
@@ -125,7 +125,7 @@ function Lesson07() {
   // потом описываем типизацию массива через обращение к этому экземпляру и использовании квадратных скобок (ISuperHero[])
 
 
-  const heroes:ISuperHero[] = [hero1, hero2, hero3]
+  const heroes: ISuperHero[] = [hero1, hero2, hero3]
 
 
   return (
@@ -135,7 +135,7 @@ function Lesson07() {
       <p>Самое интересное на этом уроке происходит в теле функции компонента и в командной строке: </p>
       {/* пример использования кнопки со значениями по умолчанию text и type */}
       {/* в качестве func передали анонимную функцию */}
-      <MyButton func={() => console.log('click!')}/>
+      <MyButton func={() => console.log('click!')} />
     </div>
   );
 }

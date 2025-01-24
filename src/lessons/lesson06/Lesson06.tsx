@@ -16,9 +16,11 @@ export default function Lesson06() {
 
     let nothing: undefined = undefined;
     console.log(nothing);
+    console.log(typeof undefined);
 
     let empty: null = null;
     console.log(empty);
+    console.log(typeof null);
 
     let value: number | string = 100;
     value = 1000;
@@ -29,7 +31,7 @@ export default function Lesson06() {
     colors.push('magenta');
     console.log(colors);
 
-    const numbers: number[] = [12, 122, 1222];
+    const numbers: number[]  = [12, 122, 1222];
     numbers.push(444);
     numbers.pop();
     console.log(numbers);
