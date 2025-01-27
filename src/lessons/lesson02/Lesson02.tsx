@@ -6,7 +6,7 @@ interface IReactInfo {
 }
 
 function Lesson02() {
-  const element = <h4>Это JSX из переменной element</h4>;
+  const element = <h3>Это JSX из переменной element</h3>;
   const text = "Эта строка пришла из переменной текст";
 
   const react: IReactInfo = {
@@ -43,7 +43,7 @@ function Lesson02() {
 
       
       <p>{showDeveloper(react)}</p>
-      <h4>Пример тернарного оператора в Реакт:</h4>
+      <h3>Пример тернарного оператора в Реакт:</h3>
       <p>
         Пользователь <b>{isLoggedIn ? "в данный момент" : "не"}</b> авторизован
       </p>

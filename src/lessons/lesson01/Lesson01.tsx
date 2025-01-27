@@ -41,7 +41,7 @@ function Lesson01() {
       <h2>Vite + React</h2>
       <h2>Lesson 1</h2>
       <h3>Date 08.01.2025</h3>
-      <h4>Introduction in React</h4>
+      <h3>Introduction in React</h3>
 
       <div className="card">
         <button onClick={handleClick}>
