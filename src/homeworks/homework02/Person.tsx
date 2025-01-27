@@ -34,7 +34,7 @@ function Person() {
             avatar: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjy5ULe5ycmqyR-kWYjM_4_bKyGLM4U6CSaw&s',
             firstname: 'Wasya',
             lastname: 'Drevniy',
-            profession: 'UX Researcher',
+            profession: 'Unemployed',
             hobby: 'Gaming',
         },
     ];
