@@ -1,7 +1,7 @@
 import { useState } from "react";
 import './feedback.css'
-import MyButton from "../myButtons/MyButton";
-import MyButton2 from "../myButtons2/MyButton2";
+// import MyButton from "../myButtons/MyButton";
+// import MyButton2 from "../myButtons2/MyButton2";
 function Feedback() {
 
     const [likeCount, setLikeCount] = useState(0);
