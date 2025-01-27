@@ -40,6 +40,8 @@ function Person() {
     ];
 
     return (
+        <>
+        <h4>Homework 02</h4>
         <div>
             {profiles.map((profile, index) => (
                 <ProfileCard
@@ -53,6 +55,7 @@ function Person() {
                 
             ))}
         </div>
+        </>
     );
 }
 

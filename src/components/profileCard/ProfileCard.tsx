@@ -24,8 +24,7 @@ interface IProfileCardProps {
 export default function ProfileCard({ avatar, firstname, lastname, profession, hobby }: IProfileCardProps) {
     return (
         <>
-            
-                <h4>Homework02</h4>
+    
                 <div className="profile-card">
                     <img src={avatar} alt={`${firstname} ${lastname}`} style={{ width: '100px', height: '100px' }} />
                     <p>Name: {firstname} {lastname}</p>
