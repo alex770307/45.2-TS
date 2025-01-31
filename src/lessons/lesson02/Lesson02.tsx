@@ -1,4 +1,4 @@
-import MyButton from "../../components/myButtons/MyButton";
+import MyButton from "../../components/myButton/MyButton";
 
 interface IReactInfo {
   developer: string;
@@ -14,14 +14,14 @@ function Lesson02() {
     logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1200px-React-icon.svg.png",
   };
 
-    function showDeveloper(obj: IReactInfo): string {
-        if (obj.developer) {
-            return "Developer: " + obj.developer;
-        }
-        return "Передайте валидный объект!"
+  function showDeveloper(obj: IReactInfo): string {
+    if (obj.developer) {
+      return "Developer: " + obj.developer;
     }
-    
-    const isLoggedIn: boolean = true;
+    return "Передайте валидный объект!"
+  }
+
+  const isLoggedIn: boolean = true;
 
   return (
     <div>
@@ -41,7 +41,7 @@ function Lesson02() {
         "Пусто!"
       )}
 
-      
+
       <p>{showDeveloper(react)}</p>
       <h3>Пример тернарного оператора в Реакт:</h3>
       <p>
@@ -49,13 +49,13 @@ function Lesson02() {
       </p>
       <MyButton func={function (): void {
         throw new Error("Function not implemented.");
-      } } />
+      }} />
       <MyButton func={function (): void {
         throw new Error("Function not implemented.");
-      } } />
+      }} />
       <MyButton func={function (): void {
         throw new Error("Function not implemented.");
-      } } />
+      }} />
     </div>
   );
 }

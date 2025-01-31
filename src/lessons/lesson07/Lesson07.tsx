@@ -1,4 +1,4 @@
-import MyButton from "../../components/myButtons/MyButton";
+import MyButton from "../../components/myButton/MyButton";
 
 function Lesson07() {
   // ! типизация объектов
