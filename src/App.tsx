@@ -14,7 +14,7 @@ import './App.css'
 // import Lesson06 from './lessons/lesson06/Lesson06'
 // import Lesson07 from './lessons/lesson07/Lesson07'
 // import Lesson08 from './lessons/lesson08/Lesson08'
-import Homework08 from './homeworks/homework08/Homework08'
+// import Homework08 from './homeworks/homework08/Homework08'
 // import FetchFox from './components/fetchFox/FetchFox'
 import Lesson09 from './lessons/lesson09/Lesson09'
 
@@ -37,7 +37,7 @@ function App() {
       {/* <Lesson06 /> */}
       {/* <Lesson07 /> */}
       {/* <Lesson08 /> */}
-      <Homework08 />
+      {/* <Homework08 /> */}
       {/* <FetchFox /> */}
       <Lesson09 />
 

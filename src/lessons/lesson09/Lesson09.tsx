@@ -5,7 +5,7 @@ export default function Lesson09() {
   console.log(styles)
   return (
     <div>
-      <h4>Lesson 09</h4>
+      <h4>Lesson 09 30.01.25</h4>
       <h2 className={styles.heading}>Lesson 09: CSS modules 🎨</h2>
       <p className={`${styles.textGreen} ${styles.desc}`}>CSS модули - это технология, c помощью которой мы можем изолированно работать со стилями</p>
       <MyButton variant="danger" text="danger" />
