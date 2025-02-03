@@ -63,6 +63,7 @@ function Lesson07() {
     isDark: true,
     isLight: true
   };
+console.log(magic);
 
   // пример создания объекта с двумя типами
   // этот случай хуже подходит для переиспользования
@@ -70,7 +71,8 @@ function Lesson07() {
     isDark: true,
     isLight: true
   };
-
+  console.log(magic1)
+  
   // * type типизация
   // альтернативное ключевое слово для описания объекта
 
@@ -98,6 +100,9 @@ function Lesson07() {
     info: 'Backend Develop in big tech company'
   };
 
+  const artists: User[] =[jane, neo];
+  console.log(artists);
+
   // ! дженерики
   // инструмент с помощью которого мы создаем обобщенные типы
   // работают при создании и использовании функций
@@ -113,20 +118,17 @@ function Lesson07() {
     return [first, second];
   }
 
-
-  makeArray<number, string>(12, '42');
+  console.log(makeArray<number, string>(12, '42'));
   makeArray<string, string>('apple', 'apple');
   makeArray<boolean, boolean>(true, false);
-
+  console.log(makeArray<boolean, object>(true, {name: 'Iwan', age: 12}));
 
   // ! типизация массива объектов
-
   // при типизации массива из объектов мы сначала типизируем один экземпляр (как в случае с ISuperHero)
   // потом описываем типизацию массива через обращение к этому экземпляру и использовании квадратных скобок (ISuperHero[])
 
-
   const heroes: ISuperHero[] = [hero1, hero2, hero3]
-
+  console.log(heroes);
 
   return (
     <div>
@@ -139,6 +141,5 @@ function Lesson07() {
     </div>
   );
 }
-
 
 export default Lesson07;

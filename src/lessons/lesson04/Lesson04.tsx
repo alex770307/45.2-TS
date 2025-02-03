@@ -36,6 +36,10 @@ function Lesson04() {
     setCount(prev => prev - 1)
   }
 
+  const resetNumber = (): void => {
+    setCount(0);
+}
+
   // ? потренируемся работать с переменными состояния
 
   const [isVisible, setIsVisible] = useState<boolean>(false)
@@ -75,6 +79,7 @@ function Lesson04() {
           <button onClick={handleMinus}>-</button>
           <span>{count}</span>
           <button onClick={handlePlus}>+</button>
+          <button onClick={resetNumber}>Reset </button>
         </div>
       )}
       <div className="color-buttons">

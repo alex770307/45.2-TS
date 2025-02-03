@@ -1,7 +1,8 @@
 import { useState } from "react";
 import './feedback.css'
-// import MyButton from "../myButtons/MyButton";
-// import MyButton2 from "../myButtons2/MyButton2";
+// import MyButton from "../myButton/MyButton";
+// import MyButton from "../myButtons2/MyButton2";
+
 function Feedback() {
 
     const [likeCount, setLikeCount] = useState(0);
@@ -23,14 +24,14 @@ function Feedback() {
         <>
             <h4>Homework04:</h4>
             <div className="feedback">
-             
-                {/* <myButton className="myButton" onClick={handleLike}>Like {likeCount}</myButton>
+            {/* <MyButton className="myButton" onClick={handleLike} text={`Like ${likeCount}`} />
                 <myButton className="myButton" onClick={handleDislike}>Dislike {dislikeCount}</myButton>
                 <myButton className="myButton" onClick={resetResults}>Reset Results</myButton> */}
 
                 <button className="myButton" onClick={handleLike}>Like {likeCount}</button>
                 <button className="myButton" onClick={handleDislike}>Dislike {dislikeCount}</button>
                 <button className="myButton" onClick={resetResults}>Reset Results</button>
+           
             </div>
         </>
     )

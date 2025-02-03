@@ -15,10 +15,14 @@ function Lesson02() {
   };
 
   function showDeveloper(obj: IReactInfo): string {
-    if (obj.developer) {
-      return "Developer: " + obj.developer;
-    }
-    return "Передайте валидный объект!"
+    // ! можно так:
+    //   if (obj.developer) {
+    //     return "Developer: " + obj.developer;
+    //   }
+    //   return "Передайте валидный объект!"
+    // ! а можно вот так:
+    return obj.developer ? ("Developer: " + obj.developer) : ("Передайте валидный объект!")
+
   }
 
   const isLoggedIn: boolean = true;
@@ -29,19 +33,16 @@ function Lesson02() {
       <h2>JSX components </h2>
       <p>
         В JSX мы можем пользоватся динамическими данными, которые приходят из
-        телареакт компонента или других файлов
+        тела реакт компонента или других файлов
       </p>
-
       {element}
-      <p>Здесь будет строка: {text}</p>
-      <p>Это вычисление случилось в JSX: {20 * 22}</p>
+      <p><b>Здесь будет строка:</b> {text}</p>
+      <p>Это вычисление случилось в JSX: <b>{20 * 22}</b></p>
       {isLoggedIn ? (
         <img width={"50px"} src={react.logo} alt="react.logo" />
       ) : (
         "Пусто!"
       )}
-
-
       <p>{showDeveloper(react)}</p>
       <h3>Пример тернарного оператора в Реакт:</h3>
       <p>
@@ -59,5 +60,4 @@ function Lesson02() {
     </div>
   );
 }
-
 export default Lesson02;

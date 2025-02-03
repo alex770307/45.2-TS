@@ -24,7 +24,7 @@ interface IMyButtonProps {
 }
 
 // указали значения по умолчанию для необязательных ключей
-export default function MyButton({ func = () => { }, text = "click me", type = "submit", variant = 'primary', disabled = false }: IMyButtonProps) {
+export default function MyButton({ func = () => {}, text = "click me", type = "submit", variant = 'primary', disabled = false }: IMyButtonProps) {
   return <button
     className={cn(styles.myButton, {
       [styles.primary]: variant === 'primary',
