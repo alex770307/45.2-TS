@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import './lesson08.css';
-import MyButton from "../../components/myButton/MyButton";
 import Lesson05 from "../lesson05/Lesson05";
+import MyButton from "../../components/myButton/MyButton";
 
 export default function Lesson08(): JSX.Element {
 
@@ -91,9 +91,9 @@ export default function Lesson08(): JSX.Element {
                 <img src={dogImg} alt="dogImg" />
             </div>
 
-            <MyButton text={`${toggle ? 'hide' : 'show'} fellowship`} func={handleToggle} />
-            <MyButton text={`${count} + 1`} func={handleCount} />
-
+             <MyButton text={`${toggle ? 'hide' : 'show'} fellowship`} func={handleToggle} />
+            <MyButton text={`${count} + 1`} func={handleCount} /> 
+            
 
             {toggle && (<Lesson05 />)}
 

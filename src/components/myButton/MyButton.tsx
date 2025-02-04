@@ -8,7 +8,7 @@
 // }
 
 import styles from './myButton.module.css'
-import cn from 'classnames';
+ import cn from 'classnames';
 // пример отдельного компонента кнопки
 // экспорт по умолчанию написан перед объявлением функции
 
