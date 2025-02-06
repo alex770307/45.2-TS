@@ -6,7 +6,7 @@ function LoginForm() {
     return (
         <>
             <h4>Homework03</h4>
-            <h2>Вход в фккаунт</h2>
+            <h2>Вход в aккаунт</h2>
             <MyInput
                 name="username"
                 type="text"
