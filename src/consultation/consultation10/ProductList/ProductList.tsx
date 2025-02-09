@@ -16,6 +16,7 @@ interface Product {
 
 export default function ProductList(): JSX.Element {
   const [products, setProducts] = useState<Product[]>([]);
+
   async function getProducts(): Promise<void> {
     const res = await fetch("https://fakestoreapi.com/products");
     const arr = await res.json();
@@ -28,21 +29,35 @@ export default function ProductList(): JSX.Element {
 
   return (
     // <div className={styles.productList}>
+    //   <ul className={styles.productCard}>
+    //     {products.map((product) => (
+    //       <li className={styles.userListItem} key={product.id}>
+    //         <div className={styles.title}>Title: {product.title}</div>
+    //         <div className={styles.price}>Price: {product.price} $$</div>
+    //         <div className={styles.category}>Category: {product.category}</div>
+    //         <div className={styles.description}>Description: {product.description}</div>
+    //         <div className={styles.rating}>Rating:</div>
+    //         <div className={styles.rate}>Rate: {product.rating.rate}</div>
+    //         <div className={styles.count}>Count: {product.rating.count}</div>
+    //         <img className={styles.image} src={product.image} alt="Image" />
+    //       </li>
+    //     ))}
+    //   </ul>
+    // </div>
+
     <div className={styles.productList}>
-      <ul className={styles.productCard}>
-        {products.map((product) => (
-          <li className={styles.userListItem} key={product.id}>
-            <div className={styles.title}>Title: {product.title}</div>
-            <div className={styles.price}>Price: {product.price} $$</div>
-            <div className={styles.category}>Category: {product.category}</div>
-            <div className={styles.description}>Description: {product.description}</div>
-            <div className={styles.rating}>Rating:</div>
-            <div className={styles.rate}>Rate: {product.rating.rate}</div>
-            <div className={styles.count}>Count: {product.rating.count}</div>
-            <img className={styles.image} src={product.image} alt="Image" />
-          </li>
-        ))}
-      </ul>
-    </div>
+    {products.map((product) => (
+      <div className={styles.userListItem} key={product.id}>
+        <div className={styles.title}>Title: {product.title}</div>
+        <div className={styles.price}>Price: {product.price} $</div>
+        <div className={styles.category}>Category: {product.category}</div>
+        <div className={styles.description}>Description: {product.description}</div>
+        <div className={styles.rating}>Rating:</div>
+        <div className={styles.rate}>Rate: {product.rating.rate}</div>
+        <div className={styles.count}>Count: {product.rating.count}</div>
+        <img className={styles.image} src={product.image} alt="Image" />
+      </div>
+    ))}
+  </div>
   );
 }
