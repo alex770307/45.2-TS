@@ -32,6 +32,7 @@ import UserPage from './consultation/consultation09/UserPage/UserPage'
 import ProductList from './consultation/consultation10/ProductList/ProductList'
 import Homework11 from './homeworks/homework11/Homework11'
 import ChuckNorris from './consultation/consultation11/ChuckNorris'
+import IpLocation from './consultation/consultation12/IpLocation'
 
 
 
@@ -61,24 +62,25 @@ function App() {
           <Route path="lesson-07" element={<Lesson07 />} />
           <Route path="lesson-08" element={<Lesson08 />} />
           <Route path="lesson-09" element={<Lesson09 />} />
-          <Route path='lesson-11' element={<Lesson11 />} />
-           <Route path='consultation-01' element={<CityPage />} />
-           <Route path='consultation-02' element={<User />} />
-           <Route path='consultation-03' element={<Playground />} />
-           <Route path='consultation-04' element={<Carshop />} />
-           <Route path='consultation-05' element={<Counter />} />
-           <Route path='consultation-06' element={<Sendwich />} />
-           <Route path='consultation-07' element={<PostContainer />} />
-           <Route path='consultation-08' element={<Coctail />} />
-           <Route path='consultation-09' element={<UserPage />} />
-           <Route path='consultation-10' element={<ProductList />} />
-          <Route path='consultation-11' element={<ChuckNorris />} />
-          <Route path="*" element={<NoPage/>}/>
+          <Route path="lesson-11" element={<Lesson11 />} />
+          <Route path="consultation-01" element={<CityPage />} />
+          <Route path="consultation-02" element={<User />} />
+          <Route path="consultation-03" element={<Playground />} />
+          <Route path="consultation-04" element={<Carshop />} />
+          <Route path="consultation-05" element={<Counter />} />
+          <Route path="consultation-06" element={<Sendwich />} />
+          <Route path="consultation-07" element={<PostContainer />} />
+          <Route path="consultation-08" element={<Coctail />} />
+          <Route path="consultation-09" element={<UserPage />} />
+          <Route path="consultation-10" element={<ProductList />} />
+          <Route path="consultation-11" element={<ChuckNorris />} />
+          <Route path="consultation-12" element={<IpLocation />} />
+
+          <Route path="*" element={<NoPage />} />
         </Route>
       </Routes>
-    
     </HashRouter>
-  )
+  );
 }
 
 export default App
