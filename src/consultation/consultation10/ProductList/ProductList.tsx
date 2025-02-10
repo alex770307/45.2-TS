@@ -1,18 +1,15 @@
 import { useEffect, useState } from "react";
-import styles from "./ProductList.module.css";
+import styles from "./productList.module.css";
 
 interface Product {
-  id: number;
-  title: string;
-  price: number;
-  description: string;
-  category: string;
-  image: string;
-  rating: {
-    rate: number;
-    count: number;
+  id:number;
+    title:string;
+    price:number;
+    category:string;
+    description:string;
+    image:string;
   };
-}
+
 
 export default function ProductList(): JSX.Element {
   const [products, setProducts] = useState<Product[]>([]);
@@ -25,39 +22,20 @@ export default function ProductList(): JSX.Element {
 
   useEffect(() => {
     getProducts();
-  });
+  },[]);
 
-  return (
-    // <div className={styles.productList}>
-    //   <ul className={styles.productCard}>
-    //     {products.map((product) => (
-    //       <li className={styles.userListItem} key={product.id}>
-    //         <div className={styles.title}>Title: {product.title}</div>
-    //         <div className={styles.price}>Price: {product.price} $$</div>
-    //         <div className={styles.category}>Category: {product.category}</div>
-    //         <div className={styles.description}>Description: {product.description}</div>
-    //         <div className={styles.rating}>Rating:</div>
-    //         <div className={styles.rate}>Rate: {product.rating.rate}</div>
-    //         <div className={styles.count}>Count: {product.rating.count}</div>
-    //         <img className={styles.image} src={product.image} alt="Image" />
-    //       </li>
-    //     ))}
-    //   </ul>
-    // </div>
-
-    <div className={styles.productList}>
-    {products.map((product) => (
-      <div className={styles.userListItem} key={product.id}>
-        <div className={styles.title}>Title: {product.title}</div>
-        <div className={styles.price}>Price: {product.price} $</div>
-        <div className={styles.category}>Category: {product.category}</div>
-        <div className={styles.description}>Description: {product.description}</div>
-        <div className={styles.rating}>Rating:</div>
-        <div className={styles.rate}>Rate: {product.rating.rate}</div>
-        <div className={styles.count}>Count: {product.rating.count}</div>
-        <img className={styles.image} src={product.image} alt="Image" />
-      </div>
-    ))}
-  </div>
+  return (  <div>
+      <ul className={styles.productList}>
+        {products.map((product) => (
+          <li className={styles.productCard}>
+            <p className={styles.title}>{product.title}</p>
+            <img className={styles.image} src={product.image} alt="" />
+            <p className={styles.price}>{`${product.price} $`}</p>
+            
+          </li>
+        ))}
+      </ul>
+    </div>
+ 
   );
 }
