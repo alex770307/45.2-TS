@@ -11,7 +11,7 @@ export default function Layout() {
       </header>
 
       <main className={styles.main}>
-        <h3>alexs home page🏠</h3>
+        {/* <h3>alexs home page🏠</h3> */}
         <div className={styles.columns}>
           <div className={styles.column}>
             <h4>Homeworks:</h4>

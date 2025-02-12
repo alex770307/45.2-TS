@@ -33,6 +33,9 @@ import ProductList from './consultation/consultation10/ProductList/ProductList'
 import Homework11 from './homeworks/homework11/Homework11'
 import ChuckNorris from './consultation/consultation11/ChuckNorris'
 import IpLocation from './consultation/consultation12/IpLocation'
+import HomePage from './components/homePage/HomePage'
+import Lesson12 from './lessons/lesson12/Lesson12'
+import FormGender from './homeworks/homework12/FormGender'
 
 
 
@@ -42,7 +45,7 @@ function App() {
     <HashRouter>
       <Routes>
         <Route path="/" element={<Layout />}>
-          <Route path="/" element={<h3></h3>} />
+          <Route path="/" element={<HomePage />} />
           <Route path="fellowship" element={<Lesson05 />} />
           <Route path="fetch-fox" element={<FetchFox />} />
           <Route path="homework-01" element={<Homework01 />} />
@@ -53,6 +56,7 @@ function App() {
           <Route path="homework-06" element={<Homework06 />} />
           <Route path="homework-08" element={<Homework08 />} />
           <Route path="homework-11" element={<Homework11 />} />
+          <Route path="homework-12" element={<FormGender />} />
           <Route path="lesson-01" element={<Lesson01 />} />
           <Route path="lesson-02" element={<Lesson02 />} />
           <Route path="lesson-03" element={<Lesson03 />} />
@@ -63,6 +67,7 @@ function App() {
           <Route path="lesson-08" element={<Lesson08 />} />
           <Route path="lesson-09" element={<Lesson09 />} />
           <Route path="lesson-11" element={<Lesson11 />} />
+          <Route path="lesson-12" element={<Lesson12 />} />
           <Route path="consultation-01" element={<CityPage />} />
           <Route path="consultation-02" element={<User />} />
           <Route path="consultation-03" element={<Playground />} />

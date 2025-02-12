@@ -24,9 +24,10 @@
 }
 
 .main {
-    flex: auto;
-    width: 100%;
-background-color: rgb(179, 255, 230);
+  /* flex: 1; */
+  flex: auto;
+  width: 100%;
+  background-color: rgb(179, 255, 230);
 }
 
 .footer {
@@ -48,8 +49,8 @@ background-color: rgb(179, 255, 230);
 }
 
 .column {
-  width: 200px; 
-  margin: 0 20px; 
+  width: 200px;
+  margin: 0 20px;
 }
 
 h4 {
