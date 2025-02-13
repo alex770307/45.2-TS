@@ -17,9 +17,9 @@ export default function Lesson12():JSX.Element {
   // onSubmit - функция, которая произойдет при событии submit
   const formik = useFormik({
     initialValues: {
-      firstname: 'firstname',
-      lastname: 'name',
-      email: 'email@mail.com'
+      firstname: '',
+      lastname: '',
+      email: ''
     } as IFormValues,
     // по этому ключу описано событие, которое произойдет по нажатию кнопки в форме
     onSubmit: (values: IFormValues, { resetForm }) => {
@@ -35,9 +35,12 @@ export default function Lesson12():JSX.Element {
       <h2>Lesson 12: Formik  📝</h2>
       <form onSubmit={formik.handleSubmit} className={styles.form}>
         {/* name в input должен совпадать с соответствующим полем в initialValues */}
-        <input value={formik.values.firstname} onChange={formik.handleChange} name="firstname" type="text" placeholder="firstname" />
-        <input value={formik.values.lastname} onChange={formik.handleChange} name="lastname" type="text" placeholder="lastname" />
-        <input value={formik.values.email} onChange={formik.handleChange} name="email" type="email" placeholder="email" />
+        <input value={formik.values.firstname}
+          onChange={formik.handleChange} name="firstname" type="text" placeholder="firstname" />
+        <input value={formik.values.lastname}
+          onChange={formik.handleChange} name="lastname" type="text" placeholder="lastname" />
+        <input value={formik.values.email}
+          onChange={formik.handleChange} name="email" type="email" placeholder="email" />
         <MyButton text="send" />
       </form>
     </div>

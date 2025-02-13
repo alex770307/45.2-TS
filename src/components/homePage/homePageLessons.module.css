@@ -1,4 +1,4 @@
-/* .gridContainer {
+.gridContainer {
     margin: 4px;
     width: 100%;
     display: grid;
@@ -19,4 +19,4 @@
 
   .gridContainer div:hover {
     background-color: rgb(171, 87, 236);
-  } */
+  }

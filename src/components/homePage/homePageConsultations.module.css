@@ -1,4 +1,4 @@
-/* .gridContainer {
+.gridContainer {
     margin: 4px;
     width: 100%;
     display: grid;
@@ -13,10 +13,10 @@
     justify-content: center;
     height: 100%;
     color: white;
-    background-color: rgb(136, 33, 214);
+    background-color: rgb(6, 54, 185);
   }
 
 
   .gridContainer div:hover {
-    background-color: rgb(171, 87, 236);
-  } */
+    background-color: rgb(49, 100, 240);
+  }
