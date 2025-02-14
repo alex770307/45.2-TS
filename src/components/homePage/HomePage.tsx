@@ -1,8 +1,8 @@
 
 import styles from './homePage.module.css'
-import HomePageLessons from './HomePageLessons';
-import HomePageHomeworks from './HomePageHomeworks';
-import HomePageConsultations from './HomePageConsultations';
+import HomePageLessons from '../homePageLessons/HomePageLessons';
+import HomePageHomeworks from '../homePageHomeworks/HomePageHomeworks';
+import HomePageConsultations from '../homePageConsultations/HomePageConsultations';
 
 
 export default function HomePage():JSX.Element {

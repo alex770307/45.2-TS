@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 export default function HomePageHomeworks():JSX.Element {
     return (
       <>
-        <h2>Homeworks</h2>
+        <h2>Homeworks:</h2>
         <div className={styles.gridContainer}>
           <Link to="homework-01">
             <div>Homework 1</div>

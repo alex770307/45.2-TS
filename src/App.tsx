@@ -1,46 +1,45 @@
-import { HashRouter, Route, Routes } from 'react-router-dom'
-import './App.css'
-import Layout from './layout/Layout'
-import Lesson05 from './lessons/lesson05/Lesson05'
-import FetchFox from './components/fetchFox/FetchFox'
-import NoPage from './components/noPage/NoPage'
-import Homework01 from './homeworks/homework01/Homework01'
-import Homework02 from './homeworks/homework02/Homework02'
-import Homework03 from './homeworks/homework03/Homework03'
-import Homework06 from './homeworks/homework06/Homework06'
-import Homework08 from './homeworks/homework08/Homework08'
-import Homework04 from './homeworks/homework04/Homework04'
-import Homework05 from './homeworks/homework05/Homework05'
-import Lesson01 from './lessons/lesson01/Lesson01'
-import Lesson02 from './lessons/lesson02/Lesson02'
-import Lesson03 from './lessons/lesson03/Lesson03'
-import Lesson04 from './lessons/lesson04/Lesson04'
-import Lesson06 from './lessons/lesson06/Lesson06'
-import Lesson07 from './lessons/lesson07/Lesson07'
-import Lesson08 from './lessons/lesson08/Lesson08'
-import Lesson09 from './lessons/lesson09/Lesson09'
-import Lesson11 from './lessons/lesson11/Lesson11'
-import CityPage from './consultation/consultation01/CityPage'
-import User from './consultation/consultation02/User'
-import Playground from './consultation/consultation03/Playground'
-import Carshop from './consultation/consultation04/Carshop/Carshop'
-import Counter from './consultation/consultation05/Counter/Counter'
-import Sendwich from './consultation/consultation06/Sendwich/Sendwich'
-import PostContainer from './consultation/consultation07/PostContainer/PostContainer'
-import Coctail from './consultation/consultation08/Coctail/Coctail'
-import UserPage from './consultation/consultation09/UserPage/UserPage'
-import ProductList from './consultation/consultation10/ProductList/ProductList'
-import Homework11 from './homeworks/homework11/Homework11'
-import ChuckNorris from './consultation/consultation11/ChuckNorris'
-import IpLocation from './consultation/consultation12/IpLocation'
-import HomePage from './components/homePage/HomePage'
-import Lesson12 from './lessons/lesson12/Lesson12'
-import FormGender from './homeworks/homework12/FormGender'
-
-
+import { HashRouter, Route, Routes } from "react-router-dom";
+import "./App.css";
+import Layout from "./layout/Layout";
+import Lesson05 from "./lessons/lesson05/Lesson05";
+import FetchFox from "./components/fetchFox/FetchFox";
+import NoPage from "./components/noPage/NoPage";
+import Homework01 from "./homeworks/homework01/Homework01";
+import Homework02 from "./homeworks/homework02/Homework02";
+import Homework03 from "./homeworks/homework03/Homework03";
+import Homework06 from "./homeworks/homework06/Homework06";
+import Homework08 from "./homeworks/homework08/Homework08";
+import Homework04 from "./homeworks/homework04/Homework04";
+import Homework05 from "./homeworks/homework05/Homework05";
+import Lesson01 from "./lessons/lesson01/Lesson01";
+import Lesson02 from "./lessons/lesson02/Lesson02";
+import Lesson03 from "./lessons/lesson03/Lesson03";
+import Lesson04 from "./lessons/lesson04/Lesson04";
+import Lesson06 from "./lessons/lesson06/Lesson06";
+import Lesson07 from "./lessons/lesson07/Lesson07";
+import Lesson08 from "./lessons/lesson08/Lesson08";
+import Lesson09 from "./lessons/lesson09/Lesson09";
+import Lesson11 from "./lessons/lesson11/Lesson11";
+import CityPage from "./consultation/consultation01/CityPage";
+import User from "./consultation/consultation02/User";
+import Playground from "./consultation/consultation03/Playground";
+import Carshop from "./consultation/consultation04/Carshop/Carshop";
+import Counter from "./consultation/consultation05/Counter/Counter";
+import Sendwich from "./consultation/consultation06/Sendwich/Sendwich";
+import PostContainer from "./consultation/consultation07/PostContainer/PostContainer";
+import Coctail from "./consultation/consultation08/Coctail/Coctail";
+import UserPage from "./consultation/consultation09/UserPage/UserPage";
+import ProductList from "./consultation/consultation10/ProductList/ProductList";
+import Homework11 from "./homeworks/homework11/Homework11";
+import ChuckNorris from "./consultation/consultation11/ChuckNorris";
+import IpLocation from "./consultation/consultation12/IpLocation";
+import HomePage from "./components/homePage/HomePage";
+import Lesson12 from "./lessons/lesson12/Lesson12";
+import FormGender from "./homeworks/homework12/FormGender";
+import ProductPage from "./consultation/consultation13/ProductPage/ProductPage";
+import Products from "./consultation/consultation13/Products/Products";
 
 function App() {
-
   return (
     <HashRouter>
       <Routes>
@@ -81,7 +80,8 @@ function App() {
           <Route path="consultation-10" element={<ProductList />} />
           <Route path="consultation-11" element={<ChuckNorris />} />
           <Route path="consultation-12" element={<IpLocation />} />
-
+          <Route path="consultation-13" element={<Products />} />
+          <Route path="products/:productId" element={<ProductPage />} />
           <Route path="*" element={<NoPage />} />
         </Route>
       </Routes>
@@ -89,4 +89,4 @@ function App() {
   );
 }
 
-export default App
+export default App;

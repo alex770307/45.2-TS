@@ -1,4 +1,4 @@
-import { NavLink, Outlet } from 'react-router-dom'
+import { Outlet } from 'react-router-dom'
 import styles from './layout.module.css'
 import Header from './Header';
 import Footer from './Footer';
@@ -11,8 +11,8 @@ export default function Layout() {
       </header>
 
       <main className={styles.main}>
-        {/* <h3>alexs home page🏠</h3> */}
-        <div className={styles.columns}>
+      
+        {/* <div className={styles.columns}>
           <div className={styles.column}>
             <h4>Homeworks:</h4>
             <ul>
@@ -330,7 +330,7 @@ export default function Layout() {
               </li>
             </ul>
           </div>
-        </div>
+        </div> */}
 
         <Outlet />
       </main>

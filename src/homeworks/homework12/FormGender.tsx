@@ -16,16 +16,24 @@ export default function FormGender(): JSX.Element {
 
   const formic = useFormik({
     initialValues: {
-      name: '',
-      gender: '',
-      probability: 0
+      name: "",
+      gender: "",
+      probability: 0,
     } as IFormGenderProps,
-    onSubmit: (values: IFormGenderProps, {resetForm}) => {
-      resetForm();
-    }
-
-
+    onSubmit: async (values) => {
+      try {
+        const response = await fetch(
+          `https://api.genderize.io/?name=${values.name}`
+        );
+        const data = await response.json();
+        setGenderData(data);
+        formic.resetForm();
+      } catch (error) {
+        console.error("Error", error);
+      }
+    },
   });
+
 
   return (
     <div>
@@ -36,10 +44,19 @@ export default function FormGender(): JSX.Element {
           onChange={formic.handleChange}
           name="name"
           type="text"
-          placeholder="name" />
+          placeholder="name"
+        />
         <MyButton text="send" />
       </form>
 
+      {genderData && (
+        <div className={styles.genderInfo}>
+          <h3>Gender Information</h3>
+          <p>Name: {genderData.name}</p>
+          <p>Gender: {genderData.gender}</p>
+          <p>Probability: {genderData.probability}</p>
+        </div>
+      )}
     </div>
-  )
+  );
 }

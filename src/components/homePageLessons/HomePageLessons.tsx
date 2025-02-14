@@ -4,7 +4,7 @@ import styles from './homePageLessons.module.css'
 export default function HomePageLessons(): JSX.Element {
   return (
     <>
-    <h2>Lessons</h2>
+    <h2>Lessons:</h2>
     <div className={styles.gridContainer}>
       
       <Link to="lesson-01">
