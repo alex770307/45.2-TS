@@ -38,6 +38,10 @@ import Lesson12 from "./lessons/lesson12/Lesson12";
 import FormGender from "./homeworks/homework12/FormGender";
 import ProductPage from "./consultation/consultation13/ProductPage/ProductPage";
 import Products from "./consultation/consultation13/Products/Products";
+import Task12 from "./exercises/lesson12/Task12";
+import Lesson13 from "./lessons/lesson13/Lesson13";
+
+
 
 function App() {
   return (
@@ -56,6 +60,7 @@ function App() {
           <Route path="homework-08" element={<Homework08 />} />
           <Route path="homework-11" element={<Homework11 />} />
           <Route path="homework-12" element={<FormGender />} />
+
           <Route path="lesson-01" element={<Lesson01 />} />
           <Route path="lesson-02" element={<Lesson02 />} />
           <Route path="lesson-03" element={<Lesson03 />} />
@@ -68,6 +73,8 @@ function App() {
           <Route path="lesson-10" element={<h2>React Routing</h2>} />
           <Route path="lesson-11" element={<Lesson11 />} />
           <Route path="lesson-12" element={<Lesson12 />} />
+          <Route path="lesson-13" element={<Lesson13 />} />
+
           <Route path="consultation-01" element={<CityPage />} />
           <Route path="consultation-02" element={<User />} />
           <Route path="consultation-03" element={<Playground />} />
@@ -82,6 +89,9 @@ function App() {
           <Route path="consultation-12" element={<IpLocation />} />
           <Route path="consultation-13" element={<Products />} />
           <Route path="products/:productId" element={<ProductPage />} />
+
+          <Route path="task-12" element={<Task12 />} />
+          
           <Route path="*" element={<NoPage />} />
         </Route>
       </Routes>
