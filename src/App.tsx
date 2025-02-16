@@ -42,6 +42,7 @@ import Task12 from "./exercises/lesson12/Task12";
 import Lesson13 from "./lessons/lesson13/Lesson13";
 import Task13 from "./exercises/lesson13/Task13";
 import Homework13 from "./homeworks/homework13/Homework13";
+import DataFetcher from "./consultation/consultation14/DataFetcher";
 
 
 
@@ -92,6 +93,7 @@ function App() {
           <Route path="consultation-12" element={<IpLocation />} />
           <Route path="consultation-13" element={<Products />} />
           <Route path="products/:productId" element={<ProductPage />} />
+          <Route path="consultation-14" element={<DataFetcher />} />
 
           <Route path="task-12" element={<Task12 />} />
           <Route path="task-13" element={<Task13 />} />

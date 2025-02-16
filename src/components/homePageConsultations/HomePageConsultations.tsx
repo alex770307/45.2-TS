@@ -45,6 +45,9 @@ export default function HomePageConsultations(): JSX.Element {
         <Link to="consultation-13">
           <div>Consultation 13</div>
         </Link>
+        <Link to="consultation-14">
+          <div>Consultation 14</div>
+        </Link>
       </div>
     </>
   );
