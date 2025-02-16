@@ -10,7 +10,9 @@ export default function HomePageExercises(): JSX.Element {
         <Link to="task-12">
           <div> 12 Formik 📝</div>
         </Link>
-      
+        <Link to="task-13">
+          <div> 13 YUP validation 🔐</div>
+        </Link>
       </div>
     </>
   );
