@@ -5,6 +5,7 @@ import styles from './products.module.css';
 import ProductCard from '../productCard/ProductCard';
 import MyButton from '../myButton/MyButton';
 import Loader from '../loader/Loader';
+import Cart from '../cart/Cart';
 
 export interface IProduct {
     id: number;
@@ -53,6 +54,8 @@ export default function Products(): JSX.Element {
     });
 
     return (
+        <>
+        <Cart />
         <div>
             <form onSubmit={formik.handleSubmit} className={styles.formContainer}>
                 <label htmlFor="quantity">Количество товаров:</label>
@@ -82,5 +85,6 @@ export default function Products(): JSX.Element {
             )}
 
         </div>
+        </>
     );
 }

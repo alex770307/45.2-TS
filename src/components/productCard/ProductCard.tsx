@@ -2,6 +2,7 @@
 import { Link } from 'react-router-dom';
 import styles from './productCard.module.css'
 import MyButton from '../myButton/MyButton';
+import { useCart } from '../../context/CartContext';
 
 interface IProductCardProps {
     id: number;
@@ -12,6 +13,8 @@ interface IProductCardProps {
 }
 
 export default function ProductCard({ title, image, id, price}: IProductCardProps): JSX.Element {
+      // ! получаем функцию добавления в корзину из контекста
+  const { addToCart } = useCart();
   return (
     <div className={styles.productCard}>
   
@@ -20,7 +23,11 @@ export default function ProductCard({ title, image, id, price}: IProductCardProp
       <div>
         <img src={image} alt="" />
       </div>
-      <Link to={String(id)}><MyButton text="to product" /></Link>
+      <section>
+        <Link to={String(id)}><MyButton text="to product" /></Link>
+        <MyButton func={() => addToCart({ id, title, price, quantity: 1 })} text="add to cart" variant="danger" />
+      </section>
+      
     </div>
   )
 }

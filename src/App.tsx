@@ -1,3 +1,4 @@
+import { CartProvider } from "./context/CartContext";
 import { HashRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
 import Layout from "./layout/Layout";
@@ -47,68 +48,68 @@ import Lesson14 from "./lessons/lesson14/Lesson14";
 import ProductPage from "./components/productPage/ProductPage";
 import Homework14 from "./homeworks/homework14/Homework14";
 
-
-
 function App() {
   return (
-    <HashRouter>
-      <Routes>
-        <Route path="/" element={<Layout />}>
-          <Route path="/" element={<HomePage />} />
-          <Route path="fellowship" element={<Lesson05 />} />
-          <Route path="fetch-fox" element={<FetchFox />} />
-          <Route path="homework-01" element={<Homework01 />} />
-          <Route path="homework-02" element={<Homework02 />} />
-          <Route path="homework-03" element={<Homework03 />} />
-          <Route path="homework-04" element={<Homework04 />} />
-          <Route path="homework-05" element={<Homework05 />} />
-          <Route path="homework-06" element={<Homework06 />} />
-          <Route path="homework-08" element={<Homework08 />} />
-          <Route path="homework-11" element={<Homework11 />} />
-          <Route path="homework-12" element={<FormGender />} />
-          <Route path="homework-13" element={<Homework13 />} />
-          <Route path="homework-14" element={<Homework14 />} />
-          <Route path="homework-14/:id" element={<ProductPage />} />
+    <CartProvider>
+      <HashRouter>
+        <Routes>
+          <Route path="/" element={<Layout />}>
+            <Route path="/" element={<HomePage />} />
+            <Route path="fellowship" element={<Lesson05 />} />
+            <Route path="fetch-fox" element={<FetchFox />} />
+            <Route path="homework-01" element={<Homework01 />} />
+            <Route path="homework-02" element={<Homework02 />} />
+            <Route path="homework-03" element={<Homework03 />} />
+            <Route path="homework-04" element={<Homework04 />} />
+            <Route path="homework-05" element={<Homework05 />} />
+            <Route path="homework-06" element={<Homework06 />} />
+            <Route path="homework-08" element={<Homework08 />} />
+            <Route path="homework-11" element={<Homework11 />} />
+            <Route path="homework-12" element={<FormGender />} />
+            <Route path="homework-13" element={<Homework13 />} />
+            <Route path="homework-14" element={<Homework14 />} />
+            <Route path="homework-14/:id" element={<ProductPage />} />
 
-          <Route path="lesson-01" element={<Lesson01 />} />
-          <Route path="lesson-02" element={<Lesson02 />} />
-          <Route path="lesson-03" element={<Lesson03 />} />
-          <Route path="lesson-04" element={<Lesson04 />} />
-          <Route path="lesson-05" element={<Lesson05 />} />
-          <Route path="lesson-06" element={<Lesson06 />} />
-          <Route path="lesson-07" element={<Lesson07 />} />
-          <Route path="lesson-08" element={<Lesson08 />} />
-          <Route path="lesson-09" element={<Lesson09 />} />
-          <Route path="lesson-10" element={<h2>React Routing</h2>} />
-          <Route path="lesson-11" element={<Lesson11 />} />
-          <Route path="lesson-12" element={<Lesson12 />} />
-          <Route path="lesson-13" element={<Lesson13 />} />
-          <Route path="lesson-14" element={<Lesson14 />} />
-          <Route path="lesson-14/:id" element={<ProductPage />} />
+            <Route path="lesson-01" element={<Lesson01 />} />
+            <Route path="lesson-02" element={<Lesson02 />} />
+            <Route path="lesson-03" element={<Lesson03 />} />
+            <Route path="lesson-04" element={<Lesson04 />} />
+            <Route path="lesson-05" element={<Lesson05 />} />
+            <Route path="lesson-06" element={<Lesson06 />} />
+            <Route path="lesson-07" element={<Lesson07 />} />
+            <Route path="lesson-08" element={<Lesson08 />} />
+            <Route path="lesson-09" element={<Lesson09 />} />
+            <Route path="lesson-10" element={<h2>React Routing</h2>} />
+            <Route path="lesson-11" element={<Lesson11 />} />
+            <Route path="lesson-12" element={<Lesson12 />} />
+            <Route path="lesson-13" element={<Lesson13 />} />
+            <Route path="lesson-14" element={<Lesson14 />} />
+            <Route path="lesson-14/:id" element={<ProductPage />} />
 
-          <Route path="consultation-01" element={<CityPage />} />
-          <Route path="consultation-02" element={<User />} />
-          <Route path="consultation-03" element={<Playground />} />
-          <Route path="consultation-04" element={<Carshop />} />
-          <Route path="consultation-05" element={<Counter />} />
-          <Route path="consultation-06" element={<Sendwich />} />
-          <Route path="consultation-07" element={<PostContainer />} />
-          <Route path="consultation-08" element={<Coctail />} />
-          <Route path="consultation-09" element={<UserPage />} />
-          <Route path="consultation-10" element={<ProductList />} />
-          <Route path="consultation-11" element={<ChuckNorris />} />
-          <Route path="consultation-12" element={<IpLocation />} />
-          <Route path="consultation-13" element={<Products />} />
-          <Route path="products/:productId" element={<ProductPage />} />
-          <Route path="consultation-14" element={<DataFetcher />} />
+            <Route path="consultation-01" element={<CityPage />} />
+            <Route path="consultation-02" element={<User />} />
+            <Route path="consultation-03" element={<Playground />} />
+            <Route path="consultation-04" element={<Carshop />} />
+            <Route path="consultation-05" element={<Counter />} />
+            <Route path="consultation-06" element={<Sendwich />} />
+            <Route path="consultation-07" element={<PostContainer />} />
+            <Route path="consultation-08" element={<Coctail />} />
+            <Route path="consultation-09" element={<UserPage />} />
+            <Route path="consultation-10" element={<ProductList />} />
+            <Route path="consultation-11" element={<ChuckNorris />} />
+            <Route path="consultation-12" element={<IpLocation />} />
+            <Route path="consultation-13" element={<Products />} />
+            <Route path="products/:productId" element={<ProductPage />} />
+            <Route path="consultation-14" element={<DataFetcher />} />
 
-          <Route path="task-12" element={<Task12 />} />
-          <Route path="task-13" element={<Task13 />} />
-          
-          <Route path="*" element={<NoPage />} />
-        </Route>
-      </Routes>
-    </HashRouter>
+            <Route path="task-12" element={<Task12 />} />
+            <Route path="task-13" element={<Task13 />} />
+
+            <Route path="*" element={<NoPage />} />
+          </Route>
+        </Routes>
+      </HashRouter>
+    </CartProvider>
   );
 }
 
