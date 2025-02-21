@@ -36,13 +36,16 @@ import IpLocation from "./consultation/consultation12/IpLocation";
 import HomePage from "./components/homePage/HomePage";
 import Lesson12 from "./lessons/lesson12/Lesson12";
 import FormGender from "./homeworks/homework12/FormGender";
-import ProductPage from "./consultation/consultation13/ProductPage/ProductPage";
+// import ProductPage from "./consultation/consultation13/ProductPage/ProductPage";
 import Products from "./consultation/consultation13/Products/Products";
 import Task12 from "./exercises/lesson12/Task12";
 import Lesson13 from "./lessons/lesson13/Lesson13";
 import Task13 from "./exercises/lesson13/Task13";
 import Homework13 from "./homeworks/homework13/Homework13";
 import DataFetcher from "./consultation/consultation14/DataFetcher";
+import Lesson14 from "./lessons/lesson14/Lesson14";
+import ProductPage from "./components/productPage/ProductPage";
+import Homework14 from "./homeworks/homework14/Homework14";
 
 
 
@@ -64,6 +67,8 @@ function App() {
           <Route path="homework-11" element={<Homework11 />} />
           <Route path="homework-12" element={<FormGender />} />
           <Route path="homework-13" element={<Homework13 />} />
+          <Route path="homework-14" element={<Homework14 />} />
+          <Route path="homework-14/:id" element={<ProductPage />} />
 
           <Route path="lesson-01" element={<Lesson01 />} />
           <Route path="lesson-02" element={<Lesson02 />} />
@@ -78,6 +83,8 @@ function App() {
           <Route path="lesson-11" element={<Lesson11 />} />
           <Route path="lesson-12" element={<Lesson12 />} />
           <Route path="lesson-13" element={<Lesson13 />} />
+          <Route path="lesson-14" element={<Lesson14 />} />
+          <Route path="lesson-14/:id" element={<ProductPage />} />
 
           <Route path="consultation-01" element={<CityPage />} />
           <Route path="consultation-02" element={<User />} />

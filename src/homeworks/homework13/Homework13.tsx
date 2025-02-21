@@ -11,16 +11,8 @@ interface IFormValues {
     confirmPassword: string;
 }
 
-// const loginSchema = Yup.object().shape({
-//     email: Yup.string()
-//     .email('Invalid email format')
-//     .required('Email is required'),
-// password: Yup.string()
-//     .min(8, 'Password is too short')
-//     .required('Password is required'),
-// });
-
 export default function Homework13(): JSX.Element {
+    
     const registerFormik = useFormik({
         initialValues: {
             username: 'Alex_7',
@@ -72,11 +64,8 @@ export default function Homework13(): JSX.Element {
                     {registerFormik.errors && <p>{registerFormik.errors.confirmPassword}</p>}
 
                 <MyButton text='register' />
-                {/* <p>{registerFormik.errors.username}</p>
-                <p>{registerFormik.errors.email}</p>
-                <p>{registerFormik.errors.password}</p>
-                <p>{registerFormik.errors.confirmPassword}</p> */}
             </form><br />
+            
             <form onSubmit={loginFormik.handleSubmit} className={styles.loginForm}>
                 <input value={loginFormik.values.email} onChange={loginFormik.handleChange}
                     name='email' type="text" placeholder='email' />
@@ -86,8 +75,6 @@ export default function Homework13(): JSX.Element {
                     name='password' type="password" placeholder='password' />
                     {loginFormik.errors && <p>{loginFormik.errors.password}</p>}
                 <MyButton text='login' />
-                {/* <p>{loginFormik.errors.email}</p>
-                <p>{loginFormik.errors.password}</p> */}
             </form>
 
         </div>
