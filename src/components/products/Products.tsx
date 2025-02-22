@@ -37,20 +37,19 @@ export default function Products(): JSX.Element {
     }, [limit]);
 
     const formik = useFormik({
-        initialValues: {
-            quantity: 10,
-        },
-        validationSchema: Yup.object().shape({
-            quantity: Yup
-                .number()
-                .typeError('Введите число')
-                .min(1, 'Минимальное значение 1')
-                .max(20, 'Максимальное значение 20')
-                .required('Обязательное поле'),
-        }),
-        onSubmit: (values) => {
-            setLimit(values.quantity);
-        },
+      initialValues: {
+        quantity: 10,
+      },
+      validationSchema: Yup.object().shape({
+        quantity: Yup.number()
+          .typeError("Enter the number")
+          .min(1, "Minimum value 1")
+          .max(20, "Maximum value 20")
+          .required("Required field"),
+      }),
+      onSubmit: (values) => {
+        setLimit(values.quantity);
+      },
     });
 
     return (
@@ -58,7 +57,7 @@ export default function Products(): JSX.Element {
         <Cart />
         <div>
             <form onSubmit={formik.handleSubmit} className={styles.formContainer}>
-                <label htmlFor="quantity">Количество товаров:</label>
+                <label htmlFor="quantity">Quantity of products:</label>
                 <input
                     id="quantity"
                     name="quantity"
@@ -68,7 +67,7 @@ export default function Products(): JSX.Element {
                 />
                 {formik.errors && 
                 <p>{formik.errors.quantity}</p>}
-                <MyButton type='submit' text='Загрузить' />
+                <MyButton type='submit' text='Loading' />
             </form>
             
             {loading ? ( <Loader /> ) : (
