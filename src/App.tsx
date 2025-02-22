@@ -37,8 +37,6 @@ import IpLocation from "./consultation/consultation12/IpLocation";
 import HomePage from "./components/homePage/HomePage";
 import Lesson12 from "./lessons/lesson12/Lesson12";
 import FormGender from "./homeworks/homework12/FormGender";
-// import ProductPage from "./consultation/consultation13/ProductPage/ProductPage";
-import Products from "./consultation/consultation13/Products/Products";
 import Task12 from "./exercises/lesson12/Task12";
 import Lesson13 from "./lessons/lesson13/Lesson13";
 import Task13 from "./exercises/lesson13/Task13";
@@ -47,6 +45,8 @@ import DataFetcher from "./consultation/consultation14/DataFetcher";
 import Lesson14 from "./lessons/lesson14/Lesson14";
 import ProductPage from "./components/productPage/ProductPage";
 import Homework14 from "./homeworks/homework14/Homework14";
+import Cart from "./components/cart/Cart";
+import Products from "./components/products/Products";
 
 function App() {
   return (
@@ -57,6 +57,13 @@ function App() {
             <Route path="/" element={<HomePage />} />
             <Route path="fellowship" element={<Lesson05 />} />
             <Route path="fetch-fox" element={<FetchFox />} />
+            
+            {/* добавили новые пути для корзины и продутков */}
+            <Route path="cart" element={<Cart />} />
+            <Route path="products" element={<Products />} />
+            {/* новый динамический роутинг */}
+            <Route path="products/:id" element={<ProductPage />} />
+
             <Route path="homework-01" element={<Homework01 />} />
             <Route path="homework-02" element={<Homework02 />} />
             <Route path="homework-03" element={<Homework03 />} />
