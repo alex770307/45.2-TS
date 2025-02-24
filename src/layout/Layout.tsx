@@ -6,7 +6,7 @@ import { getTotalPrice } from '../components/cart/Cart';
 import { useCart } from '../context/CartContext';
 
 export default function Layout() {
-    const { cart } = useCart();
+  const { cart } = useCart();
   return (
     <>
       <header className={styles.header}>
