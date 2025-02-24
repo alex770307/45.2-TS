@@ -37,6 +37,12 @@ import Lesson13 from "./lessons/lesson13/Lesson13";
 import Lesson14 from "./lessons/lesson14/Lesson14";
 import Task12 from "./exercises/lesson12/Task12";
 import Task13 from "./exercises/lesson13/Task13";
+import Carshop from "./consultation/consultation04/Carshop/Carshop";
+
+
+
+
+
 
 function App() {
   return (
@@ -84,6 +90,8 @@ function App() {
               <Route path="lesson-14" element={<Lesson14 />} />
               <Route path="lesson-14/:id" element={<ProductPage />} />
 
+              <Route path="consultation-04" element={<Carshop />} />
+       
               <Route path="task-12" element={<Task12 />} />
               <Route path="task-13" element={<Task13 />} />
 
