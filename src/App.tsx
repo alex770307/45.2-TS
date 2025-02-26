@@ -1,5 +1,5 @@
 
-import { HashRouter, Route, Routes } from "react-router-dom";
+import { HashRouter, Link, Route, Routes } from "react-router-dom";
 import { FavoritesProvider } from "./favoritesContext/FavoritesContext";
 import { CartProvider } from "./context/CartContext";
 import "./App.css";
@@ -38,6 +38,7 @@ import Lesson14 from "./lessons/lesson14/Lesson14";
 import Task12 from "./exercises/lesson12/Task12";
 import Task13 from "./exercises/lesson13/Task13";
 import Carshop from "./consultation/consultation04/Carshop/Carshop";
+import Lesson16 from "./lessons/lesson16/Lesson16";
 
 
 
@@ -89,6 +90,12 @@ function App() {
               <Route path="lesson-13" element={<Lesson13 />} />
               <Route path="lesson-14" element={<Lesson14 />} />
               <Route path="lesson-14/:id" element={<ProductPage />} />
+              <Route path="lesson-15" element={
+                <h2>На этом уроке мы создали 
+                  <Link to='/products'>корзину для продуктов</Link> 
+                  с помощью React Context 🛒
+                  </h2>} />
+              <Route path="lesson-16" element={<Lesson16 />} />
 
               <Route path="consultation-04" element={<Carshop />} />
        
