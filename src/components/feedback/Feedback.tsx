@@ -1,7 +1,7 @@
 import { useState } from "react";
-import './feedback.css'
+import styles from './feedback.module.css'
 // import MyButton from "../myButton/MyButton";
-// import MyButton from "../myButtons2/MyButton2";
+
 
 function Feedback() {
 
@@ -23,14 +23,14 @@ function Feedback() {
     return (
         <>
             <h4>Homework04:</h4>
-            <div className="feedback">
+            <div className={styles.feedback}>
             {/* <MyButton className="myButton" onClick={handleLike} text={`Like ${likeCount}`} />
                 <myButton className="myButton" onClick={handleDislike}>Dislike {dislikeCount}</myButton>
                 <myButton className="myButton" onClick={resetResults}>Reset Results</myButton> */}
 
-                <button className="myButton" onClick={handleLike}>Like {likeCount}</button>
-                <button className="myButton" onClick={handleDislike}>Dislike {dislikeCount}</button>
-                <button className="myButton" onClick={resetResults}>Reset Results</button>
+                <button className={styles.myButton} onClick={handleLike}>Like {likeCount}</button>
+                <button className={styles.myButton} onClick={handleDislike}>Dislike {dislikeCount}</button>
+                <button className={styles.myButton} onClick={resetResults}>Reset Results</button>
            
             </div>
         </>

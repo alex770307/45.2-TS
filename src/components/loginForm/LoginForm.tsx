@@ -1,10 +1,11 @@
-import MyButton from "../myButtons2/MyButton2";
+
+import MyButton from "../myButton/MyButton";
 import MyInput from "../myInput/MyInput";
-import "./LoginForm.css"
+ import styles from './loginForm.module.css'
 
 function LoginForm() {
     return (
-        <>
+        <div className={styles.loginForm}>
             <h4>Homework03</h4>
             <h2>Вход в aккаунт</h2>
             <MyInput
@@ -25,9 +26,11 @@ function LoginForm() {
                 placeholder="Введите пароль"
                 label="Пароль  "
             />
-            <MyButton type="submit">Войти</MyButton>
-        </>
+            <MyButton type="submit" text="войти"></MyButton>
+        </div>
     )
 }
 
 export default LoginForm;
+
+
