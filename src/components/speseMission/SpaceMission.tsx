@@ -1,4 +1,4 @@
-import './speseMission.css'
+import styles from './speseMission.module.css'
 export default function SpaceMission() {
 
     let shipName: string = 'Союз';
@@ -19,18 +19,21 @@ export default function SpaceMission() {
     const missionMessage = missionStarted ? startMission(shipName) : '';
 
     return (
-        <>
-            <h4>homework06</h4>
-            <h2>Миссия Марс</h2>
-            <p> Экипаж: {crewCount} человека</p>
-            <p>Капитан: {captain.join(' ')}  лет</p>
+      <div className={styles.container}>
+        <h4>homework06</h4>
+        <h2>Миссия Марс</h2>
+        <p> Экипаж: {crewCount} человека</p>
+        <p>Капитан: {captain.join(" ")} лет</p>
 
-            <ul>
-                {crewNames.map((name, index) => (
-                    <li key={index}>{name}</li>
-                ))}
-            </ul>
-            <p>{missionMessage}</p>
-        </>
-    )
+        <ul>
+          {crewNames.map((name, index) => (
+            <li key={index}>{name}</li>
+          ))}
+        </ul>
+       
+        {missionMessage && (
+          <p className={styles.missionMessage}>{missionMessage}</p>
+        )}
+      </div>
+    );
 }

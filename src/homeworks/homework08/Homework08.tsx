@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
-// import './fetchFox.css';
-import './homework.module.css'
+import styles from './homework08.module.css'
 import MyButton from "../../components/myButton/MyButton";
 import Loader from "../../components/loader/Loader";
 
@@ -27,25 +26,20 @@ export default function Homework08() {
     getFox();
   }, []);
 
-
-  // const printClick = () => console.log('click')
-
-  // printClick()
-
   return (
-    <div>
+    <div className={styles.container}>
       <h4>Homework 08</h4>
-      {isLoading ? <Loader /> : (
+      {isLoading ? (
+        <Loader />
+      ) : (
         <>
           <h2>Fetch fox 🦊</h2>
-          <div className="fox-wrapper">
-            <img src={imgFox} alt="" />
+          <div className={styles.foxWrapper}>
+            <img src={imgFox} alt="Fox" />
           </div>
-          <MyButton func={getFox} text="one more fox please" />
-
+          <MyButton func={getFox} text="one more fox please"  />
         </>
       )}
-
     </div>
   );
 }

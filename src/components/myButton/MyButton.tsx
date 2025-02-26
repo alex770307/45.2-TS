@@ -1,12 +1,3 @@
-// interface IMyButtonProps {
-//     text: string;
-//     func: () => void;
-// }
-
-// export default function MyButton({func, text}: IMyButtonProps) {
-//     return <button onClick={func}>{text}</button>
-// }
-
 import styles from './myButton.module.css'
  import cn from 'classnames';
 // пример отдельного компонента кнопки
