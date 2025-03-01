@@ -38,6 +38,12 @@ export default function Layout() {
           </NavLink>
           <NavLink
             className={({ isActive }) => (isActive ? styles.linkActive : "")}
+            to="store"
+          >
+            store
+          </NavLink>
+          <NavLink
+            className={({ isActive }) => (isActive ? styles.linkActive : "")}
             to="cart"
           >
             cart
