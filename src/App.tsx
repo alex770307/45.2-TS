@@ -4,6 +4,8 @@ import { FavoritesProvider } from "./favoritesContext/FavoritesContext";
 import { CartProvider } from "./context/CartContext";
 import "./App.css";
 import Layout from "./layout/Layout";
+import { Provider } from "react-redux";
+import { store } from "./app/store";
 
 import Cart from "./components/cart/Cart";
 import Products from "./components/products/Products";
@@ -51,74 +53,76 @@ import StorePage from "./components/storePage/StorePage";
 
 function App() {
   return (
-    <FavoritesProvider>
-      <CartProvider>
-        <HashRouter>
-          <Routes>
-            <Route path="/" element={<Layout />}>
-              <Route path="/" element={<HomePage />} />
-              <Route path="fellowship" element={<Lesson05 />} />
-              <Route path="fetch-fox" element={<FetchFox />} />
+    <Provider store={store} >
+      <FavoritesProvider>
+        <CartProvider>
+          <HashRouter>
+            <Routes>
+              <Route path="/" element={<Layout />}>
+                <Route path="/" element={<HomePage />} />
+                <Route path="fellowship" element={<Lesson05 />} />
+                <Route path="fetch-fox" element={<FetchFox />} />
 
-              {/* добавили новые пути для корзины и продутков */}
-              <Route path="cart" element={<Cart />} />
-              <Route path="products" element={<Products />} />
-              {/* новый динамический роутинг */}
-              <Route path="products/:id" element={<ProductPage />} />
-              <Route path="store" element={<Store />} />
-              <Route path="store/:id" element={<StorePage />} />
+                {/* добавили новые пути для корзины и продутков */}
+                <Route path="cart" element={<Cart />} />
+                <Route path="products" element={<Products />} />
+                {/* новый динамический роутинг */}
+                <Route path="products/:id" element={<ProductPage />} />
+                <Route path="store" element={<Store />} />
+                <Route path="store/:id" element={<StorePage />} />
 
-              <Route path="homework-01" element={<Homework01 />} />
-              <Route path="homework-02" element={<Homework02 />} />
-              <Route path="homework-03" element={<Homework03 />} />
-              <Route path="homework-04" element={<Homework04 />} />
-              <Route path="homework-05" element={<Homework05 />} />
-              <Route path="homework-06" element={<Homework06 />} />
-              <Route path="homework-08" element={<Homework08 />} />
-              <Route path="homework-11" element={<Homework11 />} />
-              <Route path="homework-12" element={<FormGender />} />
-              <Route path="homework-13" element={<Homework13 />} />
-              <Route path="homework-14" element={<Homework14 />} />
-              <Route path="homework-14/:id" element={<ProductPage />} />
-              <Route path="homework-17" element={<Homework17 />} />
-              <Route path="homework-17/:id" element={<StorePage />} />
+                <Route path="homework-01" element={<Homework01 />} />
+                <Route path="homework-02" element={<Homework02 />} />
+                <Route path="homework-03" element={<Homework03 />} />
+                <Route path="homework-04" element={<Homework04 />} />
+                <Route path="homework-05" element={<Homework05 />} />
+                <Route path="homework-06" element={<Homework06 />} />
+                <Route path="homework-08" element={<Homework08 />} />
+                <Route path="homework-11" element={<Homework11 />} />
+                <Route path="homework-12" element={<FormGender />} />
+                <Route path="homework-13" element={<Homework13 />} />
+                <Route path="homework-14" element={<Homework14 />} />
+                <Route path="homework-14/:id" element={<ProductPage />} />
+                <Route path="homework-17" element={<Homework17 />} />
+                <Route path="homework-17/:id" element={<StorePage />} />
 
-              <Route path="lesson-01" element={<Lesson01 />} />
-              <Route path="lesson-02" element={<Lesson02 />} />
-              <Route path="lesson-03" element={<Lesson03 />} />
-              <Route path="lesson-04" element={<Lesson04 />} />
-              <Route path="lesson-05" element={<Lesson05 />} />
-              <Route path="lesson-06" element={<Lesson06 />} />
-              <Route path="lesson-07" element={<Lesson07 />} />
-              <Route path="lesson-08" element={<Lesson08 />} />
-              <Route path="lesson-09" element={<Lesson09 />} />
-              <Route path="lesson-10" element={<h2>React Routing</h2>} />
-              <Route path="lesson-11" element={<Lesson11 />} />
-              <Route path="lesson-12" element={<Lesson12 />} />
-              <Route path="lesson-13" element={<Lesson13 />} />
-              <Route path="lesson-14" element={<Lesson14 />} />
-              <Route path="lesson-14/:id" element={<ProductPage />} />
-              <Route
-                path="lesson-15"
-                element={
-                  <h2>
-                    На этом уроке мы создали
-                    <Link to="/products">корзину для продуктов</Link>с помощью
-                    React Context 🛒
-                  </h2>
-                }
-              />
-              <Route path="lesson-16" element={<Lesson16 />} />
+                <Route path="lesson-01" element={<Lesson01 />} />
+                <Route path="lesson-02" element={<Lesson02 />} />
+                <Route path="lesson-03" element={<Lesson03 />} />
+                <Route path="lesson-04" element={<Lesson04 />} />
+                <Route path="lesson-05" element={<Lesson05 />} />
+                <Route path="lesson-06" element={<Lesson06 />} />
+                <Route path="lesson-07" element={<Lesson07 />} />
+                <Route path="lesson-08" element={<Lesson08 />} />
+                <Route path="lesson-09" element={<Lesson09 />} />
+                <Route path="lesson-10" element={<h2>React Routing</h2>} />
+                <Route path="lesson-11" element={<Lesson11 />} />
+                <Route path="lesson-12" element={<Lesson12 />} />
+                <Route path="lesson-13" element={<Lesson13 />} />
+                <Route path="lesson-14" element={<Lesson14 />} />
+                <Route path="lesson-14/:id" element={<ProductPage />} />
+                <Route
+                  path="lesson-15"
+                  element={
+                    <h2>
+                      На этом уроке мы создали
+                      <Link to="/products">корзину для продуктов</Link>с помощью
+                      React Context 🛒
+                    </h2>
+                  }
+                />
+                <Route path="lesson-16" element={<Lesson16 />} />
 
-              <Route path="task-12" element={<Task12 />} />
-              <Route path="task-13" element={<Task13 />} />
+                <Route path="task-12" element={<Task12 />} />
+                <Route path="task-13" element={<Task13 />} />
 
-              <Route path="*" element={<NoPage />} />
-            </Route>
-          </Routes>
-        </HashRouter>
-      </CartProvider>
-    </FavoritesProvider>
+                <Route path="*" element={<NoPage />} />
+              </Route>
+            </Routes>
+          </HashRouter>
+        </CartProvider>
+      </FavoritesProvider>
+    </Provider>
   );
 }
 
