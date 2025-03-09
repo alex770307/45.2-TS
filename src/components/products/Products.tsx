@@ -9,8 +9,8 @@ import Loader from '../loader/Loader';
 import Cart from '../cart/Cart';
 import { useFavorites } from '../../favoritesContext/FavoritesContext';
 import { useAppDispatch, useAppSelector } from '../../app/hooks';
-import { loadProducts } from '../../features/products/productsAction';
-import { loadLimitedProducts } from '../../features/products/loadLimitedProducts';
+import { loadProducts, loadLimitedProducts } from '../../features/products/productsAction';
+// import { loadLimitedProducts } from '../../features/products/loadLimitedProducts';
 
 
 export interface IProduct {
