@@ -44,6 +44,7 @@ import Task13 from "./exercises/lesson13/Task13";
 
 import Store from "./components/store/Store";
 import StorePage from "./components/storePage/StorePage";
+import Login from "./components/login/Login";
 
 
 
@@ -70,6 +71,7 @@ function App() {
                 <Route path="products/:id" element={<ProductPage />} />
                 <Route path="store" element={<Store />} />
                 <Route path="store/:id" element={<StorePage />} />
+                <Route path="login" element={<Login />} />
 
                 <Route path="homework-01" element={<Homework01 />} />
                 <Route path="homework-02" element={<Homework02 />} />
