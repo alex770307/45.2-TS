@@ -1,8 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit';
 import { IProduct } from '../../components/products/Products';
- import { loadLimitedProducts } from './loadLimitedProducts';
- import { loadProducts,  } from './productsAction';
-//  import { loadLimitedProducts } from './loadLimitedProducts';
+import { loadProducts, loadLimitedProducts } from './productsAction';
+
 
 // типизируем объект с хранилищем данных по продуктам
 interface IProductsState {
