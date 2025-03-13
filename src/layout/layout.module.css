@@ -28,7 +28,6 @@
 }
 
 .main {
-  /* flex: 1; */
   flex: auto;
   width: 100%;
   background-color: rgb(179, 255, 230);
@@ -69,4 +68,53 @@ li {
 .linkActive {
   font-weight: bold;
   color: blue;
+}
+
+
+
+.burger {
+  font-size: 25px;
+  display: none;
+  cursor: pointer;
+}
+
+.burgerMenu {
+  display: none;
+}
+
+.burger:hover {
+  color: rgb(255, 150, 69);
+}
+
+/* эти стили будут применяться на экранах размера меньше 760px */
+@media (max-width: 760px) {
+  .burger {
+    display: block;
+  }
+
+  .header {
+    /* background-color: #8821D6; */
+  }
+  .header nav {
+    /* спрятали элементы навигации */
+    display: none;
+  }
+
+  .burgerMenu {
+    background-color: rgb(206, 98, 21);
+    flex-direction: column;
+    padding: 10px 50px;
+    width: 100%;
+    /* background-color: #8821D6; */
+    display: flex;
+    align-items: center;
+  }
+
+  .burgerMenu a {
+    color: white;
+  }
+
+  .burgerMenu a:hover {
+    text-decoration: underline;
+  }
 }

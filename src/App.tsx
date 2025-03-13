@@ -45,6 +45,8 @@ import Task13 from "./exercises/lesson13/Task13";
 import Store from "./components/store/Store";
 import StorePage from "./components/storePage/StorePage";
 import Login from "./components/login/Login";
+import ProtectedRoute from "./components/protectedRoute/ProtectedRoute";
+import Youtube from "./components/youtube/Youtube";
 
 
 
@@ -61,8 +63,8 @@ function App() {
             <Routes>
               <Route path="/" element={<Layout />}>
                 <Route path="/" element={<HomePage />} />
-                <Route path="fellowship" element={<Lesson05 />} />
-                <Route path="fetch-fox" element={<FetchFox />} />
+                <Route path="fellowship" element={<ProtectedRoute outlet={<Lesson05 />}/>} />
+                <Route path="fetch-fox" element={<ProtectedRoute outlet={<FetchFox />}/>} />
 
                 {/* добавили новые пути для корзины и продутков */}
                 <Route path="cart" element={<Cart />} />
@@ -72,6 +74,7 @@ function App() {
                 <Route path="store" element={<Store />} />
                 <Route path="store/:id" element={<StorePage />} />
                 <Route path="login" element={<Login />} />
+                <Route path="youtube" element={<ProtectedRoute outlet={<Youtube />}/>} />
 
                 <Route path="homework-01" element={<Homework01 />} />
                 <Route path="homework-02" element={<Homework02 />} />

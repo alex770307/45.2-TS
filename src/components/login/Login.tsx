@@ -3,8 +3,10 @@ import * as Yup from 'yup';
 import { useFormik } from "formik";
 import MyButton from "../myButton/MyButton";
 import MyInput from "../myInput/MyInput";
-import { useAppDispatch } from '../../app/hooks';
+import { useAppDispatch, useAppSelector } from '../../app/hooks';
 import { loginAction } from '../../features/auth/authAction';
+import ErrorPage from '../errorPage/ErrorPage';
+import { useNavigate } from 'react-router-dom';
 
 const schema = Yup.object().shape({
   username: Yup
@@ -14,9 +16,14 @@ const schema = Yup.object().shape({
 });
 
 export default function Login(): JSX.Element {
-
+  const {error} =useAppSelector(state => state.auth)
+  // готовимся отправлять данные в redux
   const dispatch = useAppDispatch()
+  // готовим функцию для переадресации
+  const navigate = useNavigate()
 
+
+ 
   const formik = useFormik({
     initialValues: {
       username: 'emilys',
@@ -24,12 +31,19 @@ export default function Login(): JSX.Element {
     } as { username: string; password: string; },
     validationSchema: schema,
     validateOnChange: false,
-    onSubmit: (values) => {
-      dispatch(loginAction(values))
-      console.log(values);
-      
+    onSubmit: async (values, {resetForm}) => {
+      // не просто отправляем через dispatch action, а проверяем
+      // получаем ли мы в ответ данные по юзеру и если да,
+      // то в таком случае делаем переадресацию
+      const user = await dispatch(loginAction(values)).unwrap()
+      // если данные по юзеру есть совершаем переадресацию
+      if (user) {
+        navigate('/')
+      }
+      // resetForm()
     }
   });
+
 
   return (
     <div>
@@ -39,6 +53,8 @@ export default function Login(): JSX.Element {
         <MyInput label="password: " placeholder="type your password" type="password" name="password" formik={formik} />
         <MyButton type="submit" text="sign in" />
       </form>
+      {error && <ErrorPage text={error}/>}
+
     </div>
   );
 }

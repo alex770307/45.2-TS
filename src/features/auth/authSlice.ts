@@ -40,15 +40,25 @@ const initialState: IAuthState = {
 export const authSlice = createSlice({
   name: 'authSlice',
   initialState,
-  reducers: {},
+  reducers: {
+        // logoutUser - название для action
+        logoutUser: (state) => {
+          // через параметр стрелочной функции мы имеем доступ к state и можем его изменять как нам захочется
+          // !  в данном случае мы перезаписали данные о юзере на начальные нулевые
+          state.user = initialUser;
+        }
+    
+  },
   extraReducers: (builder) => {
     builder
       .addCase(loginAction.pending, (state) => {
         state.isLoading = true;
+        state.error = '';
       })
       .addCase(loginAction.fulfilled, (state, action) => {
         state.isLoading = false
         state.user = action.payload;
+        state.error = '';
       })
       .addCase(loginAction.rejected, (state, action) => {
         state.isLoading = false
@@ -58,9 +68,11 @@ export const authSlice = createSlice({
       .addCase(loginToken.fulfilled, (state, action) => {
         state.isLoading = false
         state.user = action.payload;
+        state.error = '';
       })
   },
 });
 
 export default authSlice;
-// export const { } = authSlice.actions
+// ! не забываем экспортировать синхронные actions
+export const { logoutUser } = authSlice.actions
